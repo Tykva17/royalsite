@@ -1,0 +1,11 @@
+{
+  "name": "royalairtable",
+  "version": "0.0.1",
+  "dependencies": {
+    "airtable": "^0.10.1"
+  },
+  "engines": {
+    "node": "12.18.2",
+    "npm": "6.14.5"
+  }
+}
