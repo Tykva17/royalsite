@@ -883,6 +883,10 @@ html body.woocommerce ul.products li.product {
 		</head>
 
 <body class="page-template-default page page-id-37 page-parent header--sticky nav-scroll-hide header--transparent theme-rosa woocommerce-no-js" data-smoothscrolling data-color="#C59D5F">
+
+
+
+
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
 	your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
@@ -901,7 +905,7 @@ html body.woocommerce ul.products li.product {
 				<div class="flexbox__item  branding-container">
 					<div class="site-header__branding">
 			<h1 class="site-title site-title--image">
-			<a class="site-logo  site-logo--image" href="../index.html" title="Rosa" rel="home">
+			<a class="site-logo  site-logo--image" href="../../../index.html" title="Rosa" rel="home">
 				<img class="site-logo-img--light" src="../../../cdn.demos.pixelgrade.com/wp-content/uploads/sites/5/2014/06/logo-rosa-white.png" rel="logo" alt="Rosa">
 									<img class="site-logo-img--dark" src="../../../cdn.demos.pixelgrade.com/wp-content/uploads/sites/5/2014/06/logo-rosa.png" rel="logo" alt="Rosa">
 							</a>
@@ -914,7 +918,7 @@ html body.woocommerce ul.products li.product {
 										<nav class="navigation  navigation--main" id="js-navigation--main">
 						<h2 class="accessibility">Primary Navigation</h2>
 
-						<ul id="menu-main-menu-2" class="nav  nav--main  nav--items-menu"><li id="menu-item-727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-727"><a href="../index.html">Home</a></li>
+						<ul id="menu-main-menu-2" class="nav  nav--main  nav--items-menu"><li id="menu-item-727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-727"><a href="../../../index.html">Home</a></li>
 <li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-37 current_page_item menu-item-728"><a href="index.html" aria-current="page">Reservations</a></li>
 <li id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-732"><a href="../menu/index.html">Menu</a>
 <ul class="sub-menu">
@@ -986,7 +990,7 @@ html body.woocommerce ul.products li.product {
 		<h4 class="otreservations-title">Make Online Reservation</h4>
 		<span class="otreservations-subtitle">Powered by OpenTable</span>
 	</div>
-		<form method="get" class="otw-widget-form" action="http://www.opentable.com/restaurant-search.aspx" target="_blank">
+		<form method="get" id="sendForm" class="otw-widget-form" action="http://www.opentable.com/restaurant-search.aspx" target="_blank">
 		<div class="otw-wrapper">
 			<div class="otw-date-li otw-input-wrap">
 				<label for="date-otreservations"><i class="icon-calendar"></i></label>
@@ -994,7 +998,7 @@ html body.woocommerce ul.products li.product {
 			</div>
 			<div class="otw-time-wrap otw-input-wrap">
 				<label for="time-otreservations"><i class="icon-clock-o"></i></label>
-				<select id="time-otreservations" name="ResTime" class="otw-reservation-time selectpicker">
+				<select id="time-otreservations" name="time" class="otw-reservation-time selectpicker">
 					<option value="6:00am">6:00 am</option>
 <option value="6:30am">6:30 am</option>
 <option value="7:00am">7:00 am</option>
@@ -1068,9 +1072,66 @@ html body.woocommerce ul.products li.product {
 				<a id="findATable" class="otreservations-submit" value="Find a Table">Find a Table</a>
 			</div>
 
+			<link rel="stylesheet" href="../tykva_style.css">
+
+
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h3>Дякуємо! <br> В найближчий час з Вами зв'яжуться)</h3>
+
+				</div>
+
+			</div>
+
+
+
 <!--			type="submit"-->
 
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 			<script>
+
+//				$(document).ready(function () {
+//
+//					$("#findATable").click(function (event) {
+//
+//						// var str = ""
+//						// $("#sendForm").serializeArray().map(function (v) {
+//						// 	str += v.name + ": " + v.value + "\n"
+//						// })
+//						//
+//						// console.log(str)
+//						//  $.get("https://api.telegram.org/bot1493276136:AAEW4_otR8obAsG6QrIXj9eYbUU8igRlKP0/sendMessage?chat_id=682305897&parse_mode=html&text=" + encodeURIComponent(str));
+//						//
+//						//
+//						// // $('#call-me-btn').text('СПАСИБО');
+//						// $('#sendTelegram')[0].reset();
+//						// setTimeout(function () {
+//						// 	// callForm.classList.remove('active');
+//						// 	// callBtn.classList.remove('call-me-form');
+//						// 	// emailBtn.style.display = 'flex';
+//						// 	// phoneBtn.style.display = 'flex';
+//						// 	// chooseTitle.style.display = 'block';
+//						// 	// chooseEmail.style.display = 'none';
+//						// 	// choosePhone.style.display = 'none';
+//						// 	// sendForm.style.display = 'none';
+//						// 	// nameUser.classList.add('hide');
+//						// 	// userComit.classList.add('hide');
+//						// 	//
+//						// 	// first = true;
+//						// 	// second = true;
+//						// }, 1000)
+//
+//
+//						event.preventDefault();
+//					});
+//				});
 
 				findATable.addEventListener('click' , function () {
 
@@ -1094,9 +1155,8 @@ html body.woocommerce ul.products li.product {
 					console.log(selectedDate,selectedTime,selectedParty,phone,username)
 
 
-
 					var xhr = new XMLHttpRequest();
-					var url = 'https://git.heroku.com/hidden-chamber-96242.git';
+					var url = 'https://royalgrillbar.herokuapp.com/';
 					xhr.open("POST", url, true);
 					xhr.setRequestHeader("Content-Type", "application/json");
 					xhr.onreadystatechange = function () {
@@ -1117,11 +1177,60 @@ html body.woocommerce ul.products li.product {
 					var data = JSON.stringify(data);
 					xhr.send(data);
 
+					var str = ""
+					$("#sendForm").serializeArray().map(function (v) {
+						str += v.name + ": " + v.value + "\n"
+					})
 
+					console.log(str)
+					$.get("https://api.telegram.org/bot1493276136:AAEW4_otR8obAsG6QrIXj9eYbUU8igRlKP0/sendMessage?chat_id=384267366&parse_mode=html&text=" + encodeURIComponent(str));
+
+
+					// $('#call-me-btn').text('СПАСИБО');
+					$('#sendTelegram')[0].reset();
+					setTimeout(function () {
+						// callForm.classList.remove('active');
+						// callBtn.classList.remove('call-me-form');
+						// emailBtn.style.display = 'flex';
+						// phoneBtn.style.display = 'flex';
+						// chooseTitle.style.display = 'block';
+						// chooseEmail.style.display = 'none';
+						// choosePhone.style.display = 'none';
+						// sendForm.style.display = 'none';
+						// nameUser.classList.add('hide');
+						// userComit.classList.add('hide');
+						//
+						// first = true;
+						// second = true;
+					}, 1000)
 
 				})
 
+				// Get the modal
+				var modal = document.getElementById("myModal");
 
+				// Get the button that opens the modal
+				var btn = document.getElementById("findATable");
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on the button, open the modal
+				btn.onclick = function() {
+					modal.style.display = "block";
+				}
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
 
 
 
@@ -1131,11 +1240,8 @@ html body.woocommerce ul.products li.product {
 
 
 
-			<input type="hidden" name="RestaurantID" class="RestaurantID" value="80221">
-			<input type="hidden" name="rid" class="rid" value="80221">
-			<input type="hidden" name="GeoID" class="GeoID" value="15">
-			<input type="hidden" name="txtDateFormat" class="txtDateFormat" value="MM/DD/YYYY">
-			<input type="hidden" name="RestaurantReferralID" class="RestaurantReferralID" value="80221">
+			<input type="hidden" name="Restaurant" class="RestaurantID" value="резерв стола">
+
 		</div>
 	</form>
 	</div>
